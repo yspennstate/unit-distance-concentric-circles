@@ -42,9 +42,10 @@ constant on finitely many arcs and comes from a $3$-coloring
 of one of Wilson's rose window graphs. Under the same hypotheses, the
 coloring $x\mapsto\lfloor3mx\rfloor\bmod3$ of the turn $x$ on both
 circles is proper for some $m$ exactly when $3$ divides the denominator
-of $q$. The irrationality hypothesis holds whenever this denominator is
-twice an odd prime power or a power of $2$ at least $4$, giving
-infinitely many examples.
+of $q$. The angle $g$ is irrational for every compatible pair with
+$p\equiv\pm2q$ except
+$q=1/5,1/7,2/7,1/9,2/9,1/12$, so the result holds for all other
+pairs.
 \end{abstract}
 
 \maketitle
@@ -99,7 +100,7 @@ $K_5$, so the measurable Brooks theorem of Conley, Marks and
 Tucker-Drob~\cite[Theorem~1.2]{CMT16} gives a measurable proper
 $4$-coloring in their sense. Under the hypotheses of
 Theorem~\ref{thm:main} below, every connected component of $U(q,p)$ is
-two-ended. With $q=a/n$ in lowest terms, the turns of the points of a
+two-ended. Write $q=a/n$ in lowest terms; this notation is kept throughout the paper. The turns of the points of a
 component have the form $\theta+i/n+jg/2$ with $i,j\in\Z$ and $\theta$
 fixed. Since $g$ is irrational, the point determines $j$, and each value
 of $j$ is taken by at most $n$ points. The rotation by $g$ maps each
@@ -107,10 +108,12 @@ component to itself, since $A(x)$ and $A(x+g)$ are both joined to
 $B(x+g/2)$, and likewise on the inner circle. It raises $j$ by $2$, so it
 acts freely, with at most $2n$ orbits on a component. A connected locally
 finite graph with a free action of $\Z$ with finitely many orbits is
-two-ended. For such graphs Weilacher's
+quasi-isometric to $\Z$ by the \v{S}varc--Milnor lemma, and so it is
+two-ended, since the number of ends is invariant under
+quasi-isometry~\cite[Chapter~I.8]{BH99}. For such graphs Weilacher's
 theorem~\cite[Theorem~1.3]{Wei20} gives $\chiB\le2\chi-1$, which is $5$
 here. For Baire measurable colorings this bound holds for every locally
-finite Borel graph, by a theorem of Conley and
+finite Borel graph of finite chromatic number, by a theorem of Conley and
 Miller~\cite[Theorem~B]{CM16}. Greb\'ik and
 Rozho\v{n}~\cite{GR21} classify local labelling problems with finite
 input labels on aperiodic Borel actions of $\Z$. After each point is
@@ -135,7 +138,7 @@ finitely many half-open arcs.
 
 With $\chi=3$, the bounds above are $4$ for $\chiM$ and $5$ for $\chiB$.
 The coloring of Theorem~\ref{thm:main} is explicit, \eqref{eq:color}
-below. Write $q=a/n$ in lowest terms. The coloring comes from a proper
+below. The coloring comes from a proper
 $3$-coloring of the finite graph $T_n$ on the vertices $A_j,B_j$
 ($j\in\Z/n\Z$) with edges $A_jA_{j+1}$, $B_jB_{j+2}$, $A_jB_j$ and
 $A_jB_{j+1}$. This is Wilson's rose window graph $R_n(1,2)$~\cite{Wil08}
@@ -164,8 +167,11 @@ increasing angle, and give each component its first one. So the irrationality of
 is what makes the Borel and measurable questions nontrivial. For small
 denominators $g$ is sometimes rational: among the $284$ compatible pairs with
 denominator of $q$ at most $60$, the number $g$ is rational exactly for
-$q=1/5,1/7,2/7,1/9,2/9$ and $1/12$ (Section~\ref{sec:comp}). The next
-result gives an infinite family where irrationality is guaranteed.
+$q=1/5,1/7,2/7,1/9,2/9$ and $1/12$ (Section~\ref{sec:comp}), and by
+Proposition~\ref{prop:rational} these are the only compatible pairs with
+$p\equiv\pm2q$ for which $g$ is rational. So Theorem~\ref{thm:main}
+applies to every other such pair. The next result gives an infinite
+family for which the irrationality of $g$ has an elementary proof.
 
 \begin{theorem}\label{thm:family}
 Let $q=a/n$ in lowest terms with $q_0\le q<1/3$, and let $p$ be the
@@ -222,12 +228,14 @@ $U(q,p)$, which proves Theorem~\ref{thm:main}.
 Section~\ref{sec:common} shows that a sector coloring exists exactly
 when $3\mid n$ (Proposition~\ref{prop:common}).
 Section~\ref{sec:family} proves that $g$ is irrational for the family
-of Theorem~\ref{thm:family} and writes out the coloring for $q=1/10$.
+of Theorem~\ref{thm:family}, writes out the coloring for $q=1/10$, and
+proves with Mann's theorem on vanishing sums of roots of
+unity~\cite{Man65} that $g$ is rational for exactly six pairs
+(Proposition~\ref{prop:rational}).
 Section~\ref{sec:comp} lists the rational values of $g$ for $n\le60$
 and the least admissible $k$ for the other pairs, and
-Section~\ref{sec:questions} asks whether these are all the rational
-values, what happens when $p\not\equiv\pm2q$, and how large $k$ must
-be.
+Section~\ref{sec:questions} asks what happens when $p\not\equiv\pm2q$
+and how large $k$ must be.
 
 \section{The model}\label{sec:model}
 
@@ -353,16 +361,16 @@ rational.
 
 \section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
 
-Let $q=a/n$ in lowest terms. By Lemma~\ref{lem:compat}, $q<1/3$, so
+By Lemma~\ref{lem:compat}, $q<1/3$, so
 $n\ge4$, and $n\ne5$ by Remark~\ref{rem:five} because $g$ is
 irrational. Let $(\alpha_j)$, $(\beta_j)$ be the sequences of
 Lemma~\ref{lem:palette}.
 
 \emph{Choice of the number of arcs.} Let $k_0\in\{1,\dots,n-1\}$ with
-$k_0a\equiv1\pmod n$. Since $ng/2$ is irrational, the numbers
-$(k_0+nt)g/2$, $t=0,1,2,\dots$, are dense modulo $1$ (the forward orbit
-of an irrational rotation is dense). So there is $k\equiv k_0\pmod n$,
-$k\ge1$, with $\|kg/2\|<1/(2n)$. Put $L=nk$. Then
+$k_0a\equiv1\pmod n$. Since $ng/2$ is irrational, the numbers $kg/2$
+with $k\ge1$ and $k\equiv k_0\pmod n$ are dense modulo $1$ (the forward
+orbit of an irrational rotation is dense). So there is such a $k$ with
+$\|kg/2\|<1/(2n)$. Put $L=nk$. Then
 \begin{equation}\label{eq:L}
 Lq=ka\equiv1\pmod n,\qquad Lp\equiv\pm2\pmod n,\qquad
 \frac{Lg}{2}=vn+\varepsilon\ \text{ with } v\in\Z,\ |\varepsilon|<\tfrac12.
@@ -457,9 +465,9 @@ chord conditions hold exactly when $\{ma/n\}\in\{1/3,2/3\}$, which is
 possible only if $3\mid n$.
 
 Conversely, if $3\mid n$, pick $m_0\in\{1,\dots,n-1\}$ with $m_0a\equiv n/3\pmod n$. Every
-$m=m_0+nt$ with $t\ge0$ satisfies $\{mq\}=1/3$, and since $ng/2$ is
-irrational the numbers $mg/2$ are dense modulo $1$; choose $t$ with
-$\{mg/2\}\in(1/3,2/3)$.
+$m\ge1$ with $m\equiv m_0\pmod n$ satisfies $\{mq\}=1/3$, and since $ng/2$ is
+irrational the numbers $mg/2$ for these $m$ are dense modulo $1$; choose
+such an $m$ with $\{mg/2\}\in(1/3,2/3)$.
 \end{proof}
 
 \begin{remark}\label{rem:radial}
@@ -522,10 +530,9 @@ $p=1/5$.
 The same computation shows that $\xi$ is a unit for every other $n\ge3$:
 for odd $n$ the elements $1-\omega^2$ and $1-\omega$ are conjugate, and for
 $n=2m$ with $m$ divisible by two distinct primes both norms are $1$. So
-for the other $n$ the number $2\cos(\pi g)$ may be an algebraic integer. For the remaining denominators the
-angle $g$ can still be irrational; in fact $g$ is irrational for $226$ of
-the $232$ compatible pairs with $n\le60$ outside the family
-(Section~\ref{sec:comp}).
+for the other $n$ the number $2\cos(\pi g)$ may be an algebraic integer.
+The angle $g$ is still irrational for all of these pairs except six, by
+Proposition~\ref{prop:rational} below.
 \end{remark}
 
 For $q=1/10$ the coloring of Theorem~\ref{thm:main} is the following.
@@ -544,11 +551,11 @@ No coloring $\lfloor3mx\rfloor\bmod3$ is proper.
 \end{corollary}
 
 \begin{proof}
-Put $w=\sqrt5$ and $t=s^2=(5+w)/10$. The values of $r=R(1/10)$ and
-$s=R(1/5)$ are the standard pentagon values, and $r^2+t-1=2rt$ by direct
+Put $w=\sqrt5$ and $\sigma=s^2=(5+w)/10$. The values of $r=R(1/10)$ and
+$s=R(1/5)$ are the standard pentagon values, and $r^2+\sigma-1=2r\sigma$ by direct
 expansion, so $\cos(\pi g)=(r^2+s^2-1)/(2rs)=s$. Let $\gamma=\pi g\in(0,\pi/2)$.
-From $2<w<5/2$ we get $(3+w)/8<t<3/4$, that is $\cos^2(\pi/5)<\cos^2\gamma<\cos^2(\pi/6)$,
-so $\pi/6<\gamma<\pi/5$. The Chebyshev polynomial $T_{11}$ is odd, and
+From $2<w<5/2$ we get $(3+w)/8<\sigma<3/4$, that is $\cos^2(\pi/5)<\cos^2\gamma<\cos^2(\pi/6)$,
+so $\pi/6<\gamma<\pi/5$. The Chebyshev polynomial of degree $11$ is odd, and
 evaluating it at $s$ in $\mathbb Q(w)(s)$ gives
 \[
 \cos(11\gamma)=s\Big(\frac{19}{25}+\frac{22w}{125}\Big)>0,\qquad
@@ -566,6 +573,79 @@ Lemma~\ref{lem:palette} for $n=10$, where $m_-=2$ and $m_+=8$. The pair lies in 
 family of Theorem~\ref{thm:family}, so $g$ is irrational, and $3\nmid10$
 rules out every sector coloring by Proposition~\ref{prop:common}.
 \end{proof}
+
+The six exceptions found for $n\le60$ are the only ones.
+
+\begin{proposition}\label{prop:rational}
+Let $q=a/n$ in lowest terms with $q_0\le q<1/3$, and let $p$ be the
+element of $(q,1/2]$ congruent to $\pm2q$. Then $g$ is rational exactly
+when $q$ is one of $1/5$, $1/7$, $2/7$, $1/9$, $2/9$ and $1/12$.
+\end{proposition}
+
+\begin{proof}
+Put $\psi=\pi q$. Since $\xi^3-3\xi=2\cos3\psi$,
+$2\cos3\psi\cos\psi=\cos2\psi+\cos4\psi$ and
+$\sin5\psi=\sin\psi\,(1+2\cos2\psi+2\cos4\psi)$, Lemma~\ref{lem:compat}
+gives
+\[
+2\cos(\pi g)=2\cos3\psi+\frac{1}{2\cos\psi}
+=\frac{1+2\cos2\psi+2\cos4\psi}{2\cos\psi}=\frac{\sin5\psi}{\sin2\psi},
+\]
+that is,
+\begin{equation}\label{eq:sines}
+\sin(2\psi+\pi g)+\sin(2\psi-\pi g)-\sin5\psi=0.
+\end{equation}
+Suppose that $g$ is rational. Writing $\sin z=(e^{iz}-e^{-iz})/(2i)$ and
+$-1=e^{\pi i}$, \eqref{eq:sines} becomes $\sum_{j=1}^6e^{\pi i\lambda_j}=0$ with
+\[
+\lambda_1=2q+g,\quad \lambda_2=1-2q-g,\quad \lambda_3=2q-g,\quad \lambda_4=1-2q+g,\quad
+\lambda_5=1+5q,\quad \lambda_6=-5q,
+\]
+a vanishing sum of six roots of unity. Equal terms may be merged into one
+root with a positive integer coefficient, and a vanishing sum with
+positive integer coefficients is a sum of minimal ones, that is, of
+vanishing sums with no vanishing proper subsum~\cite[Section~3]{PR98}.
+So the indices $1,\dots,6$ split into classes of at least two elements
+each, such that the terms in each class form a minimal vanishing sum.
+By a theorem of Mann~\cite{Man65}, in the form
+of~\cite[Lemma~1]{PR98}, the roots of a minimal vanishing sum are, after
+a rotation, $N$-th roots of unity, where $N$ is the product of the primes
+not exceeding the number of distinct roots. Each class has at most six
+distinct roots, so $N$ divides $30$ and the quotient of two terms in one
+class is a $30$-th root of unity. Thus $\lambda_i-\lambda_j\in\frac1{15}\Z$
+when $i$ and $j$ lie in one class. The constant terms of the
+$\lambda_j$ are integers, so this says $\delta_1q+\delta_2g\in\frac1{15}\Z$,
+where $(\delta_1,\delta_2)\in\Z^2$ is the difference of the coefficient
+vectors of $\lambda_i$ and $\lambda_j$ with respect to $q$ and $g$, and
+the same holds for every vector in the lattice $\Lambda\subset\Z^2$
+spanned by these differences.
+
+There are $41$ partitions of $\{1,\dots,6\}$ into classes with at least
+two elements. For each of them, $\Lambda$ contains a vector $(\nu,0)$
+with $\nu\in\{2,4,6,10,14,18\}$ (Section~\ref{sec:comp}), so
+$\nu q\in\frac1{15}\Z$ and $n$ divides one of $30$, $60$, $90$, $150$, $210$
+and $270$. For $n\le60$ the computation in Section~\ref{sec:comp} shows
+that $g$ is rational exactly for the six listed values. The remaining
+denominators are $70$, $75$, $90$, $105$, $135$, $150$, $210$ and $270$.
+For these, $\kappa=2\cos(\pi g)=\xi^3-3\xi+1/\xi$ lies in
+$\mathbb Q(e^{\pi i/n})$, and its conjugates are
+$\kappa_b=\xi_b^3-3\xi_b+1/\xi_b$ with $\xi_b=2\cos(\pi ab/n)$ and $b$
+prime to $2n$. If $g$ were rational, then $\kappa=\zeta+\zeta^{-1}$ for a
+root of unity $\zeta$, and every conjugate of $\kappa$ would lie in
+$[-2,2]$. For each of the $95$ compatible pairs with these denominators
+some $\kappa_b$ has absolute value greater than $5$
+(Section~\ref{sec:comp}), so $g$ is irrational.
+\end{proof}
+
+For $q=1/5,1/7,2/7,1/9,2/9,1/12$ the values of $g$ are
+$1/2,1/3,2/3,2/9,5/9,1/12$. So Theorem~\ref{thm:main} applies to every
+compatible pair with $p\equiv\pm2q$ other than these six, and
+Theorem~\ref{thm:family} gives an elementary proof, without Mann's
+theorem, for the denominators $2\ell^e$ and $2^e$. Relation
+\eqref{eq:sines} is a rational linear relation among sines of rational
+multiples of $\pi$. Rational linear relations among the cosines of at
+most four rational multiples of $\pi$ were classified by Conway and
+Jones~\cite{CJ76}.
 
 \section{Computations}\label{sec:comp}
 
@@ -588,24 +668,24 @@ $2{,}445{,}927$, and for $q=1/10$ the least $k$ is $11$. For $q=1/10$
 the two colorings of Remark~\ref{rem:hyp}, the one without the shift by
 half an arc and the one with $k=2$, join $88$ and $64$ pairs of arcs,
 respectively, by edges whose ends have the same color.
+\item For each of the $41$ partitions in the proof of
+Proposition~\ref{prop:rational}, the least $\nu>0$ with $(\nu,0)\in\Lambda$
+is computed from the $2\times2$ minors of the spanning vectors. The values
+are $\nu=2,4,6,10,14,18$, taken by $34$, $2$, $1$, $1$, $1$ and $2$
+partitions. For the $95$ compatible pairs with $n>60$ dividing one of
+$30,60,90,150,210,270$, all conjugates $\kappa_b$ are evaluated at $50$
+digits, and in every case the largest has absolute value greater than
+$5.04$. No $a/n$ with one of these denominators lies within $10^{-4}$
+of $q_0$, so compatibility is decided correctly at this precision.
 \end{enumerate}
 
 \section{Questions}\label{sec:questions}
 
-The six rational values of $g$ found for $n\le60$ all have small
-denominators. Rationality of $g$ is a linear relation with rational
-coefficients among cosines of rational multiples of $\pi$, and relations
-of this kind were classified by Conway and Jones~\cite{CJ76}.
-
-\emph{Question 1.} Are $q=1/5,1/7,2/7,1/9,2/9,1/12$ the only compatible
-$q$ with $p\equiv\pm2q$ for which $g$ is rational? A positive answer
-would extend Theorem~\ref{thm:main} to every other such pair.
-
-\emph{Question 2.} When $p\not\equiv\pm2q$ the finite graph $T_n$ is
+\emph{Question 1.} When $p\not\equiv\pm2q$ the finite graph $T_n$ is
 replaced by another one. Which rational compatible pairs with $g$
 irrational have Borel chromatic number $3$?
 
-\emph{Question 3.} Bound the least $k$ allowed in
+\emph{Question 2.} Bound the least $k$ allowed in
 Section~\ref{sec:proof}, and hence the number of arcs, in terms of $n$
 and $g$.
 
@@ -635,12 +715,15 @@ This paper is part of a broader research project on proving open
 problems with AI systems, carried out with Claude (Anthropic) and Codex (OpenAI) connected
 to Math Brain~\cite{MathBrainRepo} inside the Brain
 framework~\cite{BrainFramework}, as described in~\cite{MathBrainPaper}.
-Codex (model GPT-6.1-sol) found and proved Theorem~\ref{thm:main},
+Codex (model GPT-6.1-sol) proposed and proved Theorem~\ref{thm:main},
 Lemma~\ref{lem:palette}, Proposition~\ref{prop:common} and
 Corollary~\ref{cor:tenth}, and a separate Codex run audited them. Claude
-(Opus~5.5) checked these proofs, found and proved Lemma~\ref{lem:compat},
-Theorem~\ref{thm:family} and Remark~\ref{rem:radial}, wrote the code of
-Section~\ref{sec:comp} and wrote the text. The rose window graphs are
+(Opus~5.5) checked these proofs, proposed and proved Lemma~\ref{lem:compat},
+Theorem~\ref{thm:family}, Proposition~\ref{prop:rational} and
+Remark~\ref{rem:radial}, wrote the code of Section~\ref{sec:comp} and
+wrote the text. Proposition~\ref{prop:rational} rests on Mann's theorem on
+vanishing sums of roots of unity~\cite{Man65}, used in the form given by
+Poonen and Rubinstein~\cite{PR98}. The rose window graphs are
 Wilson's~\cite{Wil08}. Radial colorings of annuli in the unit-distance
 graph were studied by Alm and Manske~\cite{AM14}, and the sector
 colorings of Proposition~\ref{prop:common} are of the kind used by
@@ -653,7 +736,9 @@ dissemination.
 
 \section*{Data and code availability}
 
-The script \texttt{verify.py} and its output are available at
+The scripts \texttt{verify.py} (Section~\ref{sec:comp}) and
+\texttt{rational\_g.py} (the lattice bound and the conjugate test in the
+proof of Proposition~\ref{prop:rational}) and their outputs are available at
 \url{https://github.com/yspennstate/unit-distance-concentric-circles}.
 
 \begin{thebibliography}{99}
@@ -661,6 +746,11 @@ The script \texttt{verify.py} and its output are available at
 \bibitem{AM14}
 J.~F. Alm and J.~Manske, \emph{On radial colorings of annuli},
 Australas. J. Combin. \textbf{60} (2014), 270--278, arXiv:1305.5229.
+
+\bibitem{BH99}
+M.~R. Bridson and A.~Haefliger, \emph{Metric Spaces of Non-Positive
+Curvature}, Grundlehren der Mathematischen Wissenschaften \textbf{319},
+Springer, Berlin, 1999, doi:10.1007/978-3-662-12494-9.
 
 \bibitem{CMT16}
 C.~T. Conley, A.~S. Marks and R.~D. Tucker-Drob, \emph{Brooks's theorem
@@ -697,6 +787,16 @@ doi:10.1006/aima.1998.1771.
 L.~Kronecker, \emph{Zwei S\"atze \"uber Gleichungen mit ganzzahligen
 Coefficienten}, J. Reine Angew. Math. \textbf{53} (1857), 173--175,
 doi:10.1515/crll.1857.53.173.
+
+\bibitem{Man65}
+H.~B. Mann, \emph{On linear relations between roots of unity},
+Mathematika \textbf{12} (1965), 107--117, doi:10.1112/S0025579300005210.
+
+\bibitem{PR98}
+B.~Poonen and M.~Rubinstein, \emph{The number of intersection points
+made by the diagonals of a regular polygon}, SIAM J. Discrete Math.
+\textbf{11} (1998), 135--156, doi:10.1137/S0895480195281246;
+arXiv:math/9508209 (the numbering cited is that of the arXiv version).
 
 \bibitem{Soi09}
 A.~Soifer, \emph{The Mathematical Coloring Book}, Springer, New York,
