@@ -108,7 +108,10 @@ $B(x+g/2)$, and likewise on the inner circle. It raises $j$ by $2$, so it
 acts freely, with at most $2n$ orbits on a component. A connected locally
 finite graph with a free action of $\Z$ with finitely many orbits is
 two-ended. For such graphs Weilacher's
-theorem~\cite[Theorem~1.3]{Wei20} gives $\chiB\le2\chi-1$. Greb\'ik and
+theorem~\cite[Theorem~1.3]{Wei20} gives $\chiB\le2\chi-1$, which is $5$
+here. For Baire measurable colorings this bound holds for every locally
+finite Borel graph, by a theorem of Conley and
+Miller~\cite[Theorem~B]{CM16}. Greb\'ik and
 Rozho\v{n}~\cite{GR21} classify local labelling problems with finite
 input labels on aperiodic Borel actions of $\Z$. After each point is
 grouped with its rotations by multiples of $1/n$, a proper $3$-coloring
@@ -215,7 +218,7 @@ when $3\mid n$ (Proposition~\ref{prop:common}).
 Section~\ref{sec:family} proves that $g$ is irrational for the family
 of Theorem~\ref{thm:family} and writes out the coloring for $q=1/10$.
 Section~\ref{sec:comp} lists the rational values of $g$ for $n\le60$
-and the arc-by-arc check of \eqref{eq:color}, and
+and the least admissible $k$ for the other pairs, and
 Section~\ref{sec:questions} asks whether these are all the rational
 values, what happens when $p\not\equiv\pm2q$, and how large $k$ must
 be.
@@ -574,15 +577,11 @@ rational for exactly six pairs, $q=1/5,1/7,2/7,1/9,2/9,1/12$, with
 $g=1/2,1/3,2/3,2/9,5/9,1/12$. Of the $284$ compatible pairs, $52$ lie in
 the family of Theorem~\ref{thm:family}.
 \item For each of the remaining $278$ pairs, the least $k$ allowed in
-Section~\ref{sec:proof} is computed, and the coloring \eqref{eq:color}
-is compared with the edges \eqref{eq:edges} arc by arc. For every arc and
-every shift $\pm q$, $\pm p$, $\pm g/2$, the arcs met by the shifted arc
-are found as intervals and their colors compared. No edge is
-monochromatic. The largest $L$ is $2{,}445{,}927$, and the smallest
-distance from an arc endpoint to a shifted arc endpoint is
-$1.7\times10^{-3}$ of an arc. For $q=1/10$ the least $k$ is $11$. The
-two colorings of Remark~\ref{rem:hyp} have $64$ and $88$ monochromatic
-pairs of arcs.
+Section~\ref{sec:proof} is computed. The largest value of $L=nk$ is
+$2{,}445{,}927$, and for $q=1/10$ the least $k$ is $11$. For $q=1/10$
+the two colorings of Remark~\ref{rem:hyp}, the one without the shift by
+half an arc and the one with $k=2$, join $88$ and $64$ pairs of arcs,
+respectively, by cross edges whose ends have the same color.
 \end{enumerate}
 
 \section{Questions}\label{sec:questions}
@@ -672,6 +671,11 @@ J.~Chybowska-Sok\'o\l, K.~Junosza-Szaniawski and K.~W\k{e}sek,
 \emph{Coloring distance graphs on the plane}, Discrete Math.
 \textbf{346} (2023), no.~7, 113441, doi:10.1016/j.disc.2023.113441;
 arXiv:2201.04499 (the numbering cited is that of the arXiv version).
+
+\bibitem{CM16}
+C.~T. Conley and B.~D. Miller, \emph{A bound on measurable chromatic
+numbers of locally finite Borel graphs}, Math. Res. Lett. \textbf{23}
+(2016), 1633--1644, doi:10.4310/MRL.2016.v23.n6.a3.
 
 \bibitem{GR21}
 J.~Greb\'ik and V.~Rozho\v{n}, \emph{Classification of local problems on
