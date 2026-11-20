@@ -1,0 +1,81 @@
+{
+ "lemma": {
+  "n_checked": "4..500 except 5",
+  "failures": [],
+  "T4_edges": 14,
+  "T5_proper_3colorings": 0
+ },
+ "pairs": {
+  "doubled_pairs_q_lt_third_n_le_60": 367,
+  "compatible": 284,
+  "x0": 1.9403926636606703,
+  "q0": 0.07790844892243048,
+  "compat_threshold_mismatches": [],
+  "unit_criterion_mismatches": [],
+  "rational_g": [
+   [
+    "1/5",
+    0.5
+   ],
+   [
+    "1/7",
+    0.333333333
+   ],
+   [
+    "2/7",
+    0.666666667
+   ],
+   [
+    "1/9",
+    0.222222222
+   ],
+   [
+    "2/9",
+    0.555555556
+   ],
+   [
+    "1/12",
+    0.083333333
+   ]
+  ],
+  "family_members": 52,
+  "irrational_g": 278
+ },
+ "theorem": {
+  "pairs_checked": 278,
+  "failures": [],
+  "max_L": 2445927,
+  "smallest_margin": 0.001730580052826073,
+  "q_1_10": [
+   {
+    "q": "1/10",
+    "k": 11,
+    "L": 110,
+    "violations": 0,
+    "min_margin": 0.19145051461308496
+   }
+  ]
+ },
+ "controls": {
+  "q1_10_k2_violations": 64,
+  "q1_10_k11_no_half_phase_violations": 88
+ },
+ "proposition": {
+  "pairs": 278,
+  "three_divides_n": 69,
+  "mismatches": []
+ },
+ "corollary": {
+  "R(1/10)=r": true,
+  "R(1/5)=s": true,
+  "r^2+t-1=2rt": true,
+  "cos11g/s=19/25+22w/125": true,
+  "cos^2(11g)=1/2+6469w/31250": true,
+  "cos^2(pi/10)=(5+w)/8": true,
+  "difference": true,
+  "4877/125000": true,
+  "19/110<g<21/110": true,
+  "minpoly 2cos(2pi g) = 5X^2-4": true,
+  "g": 0.17620819117478337
+ }
+}

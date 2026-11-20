@@ -1,0 +1,713 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\T}{\mathbb{T}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\chiB}{\chi_{\mathrm B}}
+\newcommand{\chiM}{\chi_{\mu}}
+
+\hypersetup{pdftitle={Borel Three-Colorings of Unit-Distance Graphs on Two Concentric Circles},pdfauthor={Yitzchak Shmalo}}
+
+\begin{document}
+
+\title[Three-colorings on two concentric circles]{Borel Three-Colorings of Unit-Distance Graphs on Two Concentric Circles}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{}
+\subjclass[2020]{05C15, 03E15, 52C10, 11R18}
+\keywords{unit-distance graph, Borel chromatic number, measurable chromatic number, rose window graph, irrational rotation, cyclotomic units}
+
+\begin{abstract}
+Take two concentric circles whose radii make unit chords subtend the
+rational numbers of turns $q<p$, and join two points of their union when
+they are at distance one. Suppose that $p\equiv\pm2q\pmod 1$ and that
+the angle $\pi g$ at the centre between the endpoints of a unit segment
+joining the two circles is an irrational multiple of $\pi$. We show that
+the chromatic number, the Lebesgue measurable chromatic number and the
+Borel chromatic number of this graph all equal $3$. The coloring is
+constant on finitely many arcs and comes from a $3$-coloring
+of one of Wilson's rose window graphs. Under the same hypotheses, the
+coloring $x\mapsto\lfloor3mx\rfloor\bmod3$ of the turn $x$ on both
+circles is proper for some $m$ exactly when $3$ divides the denominator
+of $q$. The irrationality hypothesis holds whenever this denominator is
+twice an odd prime power or a power of $2$ at least $4$, giving
+infinitely many examples.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $X$ be a set in the plane and let $G(X)$ be the graph on $X$ in
+which two points are adjacent when they are at Euclidean distance one.
+For $X=\mathbb R^2$ this is the graph of the Hadwiger--Nelson
+problem~\cite{Soi09}. For a set $X$ carrying a Borel structure and a
+measure one can also ask for proper colorings that are Borel or
+measurable. The resulting chromatic numbers were introduced in a general
+setting by Kechris, Solecki and Todorcevic~\cite{KST99}, and they can be
+larger than the ordinary chromatic number. The basic example, recalled
+by Conley, Marks and Tucker-Drob~\cite{CMT16}, is the graph on the
+circle that joins each point to its image under an irrational rotation.
+It is a union of bi-infinite paths, so it has chromatic number $2$, but
+it has no measurable proper $2$-coloring.
+
+We study a simple planar instance in which irrational rotation
+appears naturally. For $0<t\le 1/2$ put $R(t)=1/(2\sin\pi t)$, so that a
+unit chord of the circle of radius $R(t)$ subtends the angle $2\pi t$.
+Given $0<q<p\le1/2$ let
+\[
+r=R(q),\qquad s=R(p),
+\]
+and let $U(q,p)$ be the unit-distance graph on the union of the circle
+of radius $r$ and the circle of radius $s$ about the origin. Since
+$q<p$ we have $r>s$. Two points on different circles are joined by an
+edge, which we call a \emph{cross edge}, when their angular difference
+is $\pm\pi g$, where $g\in[0,1]$ is defined by
+\begin{equation}\label{eq:cross}
+r^2+s^2-2rs\cos(\pi g)=1.
+\end{equation}
+We call the pair \emph{compatible} when this equation has a solution.
+Measuring angles in turns, a point at turn $x$ on the outer circle is
+adjacent to $x\pm q$ on the same circle and to $x\pm g/2$ on the inner
+circle, and a point at turn $y$ on the inner circle is adjacent to
+$y\pm p$ on the inner circle. When $q$ and $p$ are rational and $g$ is
+irrational, the rotations by $q$ and by $p$ have finite order and the
+cross edges carry an irrational rotation.
+
+We write $\chi$, $\chiM$ and $\chiB$ for the chromatic number, the
+Lebesgue measurable chromatic number and the Borel chromatic number of
+$U(q,p)$. Here the measure is arc length on each circle, and a
+coloring is required to be proper at every point; Remark~\ref{rem:null}
+shows that the lower bound does not change if properness is only
+required off a null set.
+
+The general theorems give weaker bounds for these graphs. Every vertex of $U(q,p)$ has degree at most $4$ and there is no
+$K_5$, so the measurable Brooks theorem of Conley, Marks and
+Tucker-Drob~\cite[Theorem~1.2]{CMT16} gives a measurable proper
+$4$-coloring in their sense. Under the hypotheses of
+Theorem~\ref{thm:main} below, every connected component of $U(q,p)$ is
+two-ended. With $q=a/n$ in lowest terms, the turns of the points of a
+component have the form $\theta+i/n+jg/2$ with $i,j\in\Z$ and $\theta$
+fixed. Since $g$ is irrational, the point determines $j$, and each value
+of $j$ is taken by at most $n$ points. The rotation by $g$ maps each
+component to itself, since $A(x)$ and $A(x+g)$ are both joined to
+$B(x+g/2)$, and likewise on the inner circle. It raises $j$ by $2$, so it
+acts freely, with at most $2n$ orbits on a component. A connected locally
+finite graph with a free action of $\Z$ with finitely many orbits is
+two-ended. For such graphs Weilacher's
+theorem~\cite[Theorem~2]{Wei20} gives $\chiB\le2\chi-1$. Greb\'ik and
+Rozho\v{n}~\cite{GR21} classify local labelling problems with finite
+input labels on aperiodic Borel actions of $\Z$. After each point is
+grouped with its rotations by multiples of $1/n$, a proper $3$-coloring
+of $U(q,p)$ becomes such a problem over the rotation by $g/2$ that
+exchanges the two circles. Their Theorem~5.9 gives a Borel solution
+whenever the problem is not mixing in the sense
+of~\cite[Definition~5.8]{GR21}. We do not decide whether this problem is
+mixing. Theorem~\ref{thm:main} below gives $\chiM=\chiB=3$ either way,
+by a coloring that is constant on finitely many arcs and given by the
+same construction for every $n$.
+
+\begin{theorem}\label{thm:main}
+Let $0<q<p\le1/2$ be rational with $p\equiv\pm2q\pmod1$, suppose the
+pair is compatible, and suppose $g$ is irrational. Then
+\[
+\chi(U(q,p))=\chiM(U(q,p))=\chiB(U(q,p))=3,
+\]
+and $U(q,p)$ has a proper $3$-coloring that is constant on each of
+finitely many half-open arcs.
+\end{theorem}
+
+With $\chi=3$, the bounds above are $4$ for $\chiM$ and $5$ for $\chiB$.
+The coloring of Theorem~\ref{thm:main} is explicit, \eqref{eq:color}
+below. Write $q=a/n$ in lowest terms. The coloring comes from a proper
+$3$-coloring of the finite graph $T_n$ on the vertices $A_j,B_j$
+($j\in\Z/n\Z$) with edges $A_jA_{j+1}$, $B_jB_{j+2}$, $A_jB_j$ and
+$A_jB_{j+1}$. This is Wilson's rose window graph $R_n(1,2)$~\cite{Wil08}
+with its indices reversed, and it is $3$-colorable for every $n\ge4$
+except $n=5$ (Lemma~\ref{lem:palette}). Both circles are cut into
+$L=nk$ equal arcs, with $k\equiv a^{-1}\pmod n$ chosen so that
+\[
+Lq\equiv1\pmod n,\qquad Lp\equiv\pm2\pmod n,\qquad
+\frac{Lg}{2}=vn+\varepsilon\quad(v\in\Z,\ |\varepsilon|<\tfrac12).
+\]
+The rotations by $q$ and $p$ then move the index of an arc by $1$ and by
+$\pm2$ modulo $n$. Once the arcs of the inner circle are offset by half
+an arc, the rotations by $\pm g/2$ take the arc of index $j$ on the outer
+circle into the arcs of indices $j$ and $j+1$ modulo $n$ on the inner
+circle. So every edge of $U(q,p)$ lands on an edge of $T_n$. The lower
+bound comes from a $5$-cycle. The condition $p\equiv\pm2q$ forces
+$q<1/3$, and compatibility holds exactly for $q_0\le q<1/3$, where
+$q_0\approx0.0779$ is defined in Lemma~\ref{lem:compat}.
+
+Theorem~\ref{thm:main} needs $g$ to be irrational, and for small
+denominators this sometimes fails: among the $284$ compatible pairs with
+denominator of $q$ at most $60$, the number $g$ is rational exactly for
+$q=1/5,1/7,2/7,1/9,2/9$ and $1/12$ (Section~\ref{sec:comp}). The next
+result gives an infinite family where irrationality is guaranteed.
+
+\begin{theorem}\label{thm:family}
+Let $q=a/n$ in lowest terms with $q_0\le q<1/3$, and let $p$ be the
+element of $(q,1/2]$ congruent to $\pm2q$. If $n=2\ell^e$ for an odd
+prime $\ell$ and $e\ge1$, or $n=2^e$ with $e\ge2$, then $g$ is
+irrational. Hence Theorem~\ref{thm:main} applies to infinitely many
+pairs, among them $q=1/10$, $p=1/5$.
+\end{theorem}
+
+By Lemma~\ref{lem:compat}, $2\cos(\pi g)=\xi^3-3\xi+1/\xi$ with
+$\xi=2\cos(\pi q)$, and $\xi$ is not a unit exactly for these $n$, so
+that $2\cos(\pi g)$ is not an algebraic integer. For $q=1/10$, $p=1/5$
+one may take $110$ arcs on each circle, and Corollary~\ref{cor:tenth}
+gives the coloring explicitly.
+
+A natural first attempt is a \emph{sector coloring}: cut the plane into
+$3m$ equal sectors about the origin and color them cyclically, so that
+the point at turn $x$ on either circle gets the color
+$\lfloor3mx\rfloor\bmod3$. This is a radial coloring in the sense of
+Alm and Manske~\cite{AM14}: there are finitely many rays from the
+origin, each open sector between consecutive rays has one color, and
+the rays themselves may be colored arbitrarily. Alm and Manske study radial colorings of the
+unit-distance graphs of annuli of outer radius less than $1$. Since
+$r<1$ exactly when $q>1/6$, for $1/6<q<1/3$ the graph $U(q,p)$ lies in
+such an annulus. Chybowska-Sok\'o\l, Junosza-Szaniawski and
+W\k{e}sek~\cite[Proposition~4.1]{CJW22} use radial colorings to bound
+the chromatic number of the graph on an annulus that joins points at
+distances in an interval $[1,b]$. Proposition~\ref{prop:common} shows
+that under the hypotheses of Theorem~\ref{thm:main} a sector coloring
+of $U(q,p)$ exists exactly when $3$ divides $n$, and
+Remark~\ref{rem:radial} shows that for $3\nmid n$ no proper
+$3$-coloring of $U(q,p)$ uses the same function of the turn on both
+circles. So sector
+colorings miss, for example, $q=1/10$, and Theorem~\ref{thm:family}
+gives infinitely many pairs that they miss.
+
+The facts about cyclotomic units used in Section~\ref{sec:family} are
+standard~\cite[Chapter~2]{Was97}. For the pairs with $3\nmid n$, among
+them $q=1/10$ and infinitely many pairs of Theorem~\ref{thm:family},
+neither a sector coloring
+nor the general bounds of~\cite{CMT16} and~\cite{Wei20} give the value
+$3$ for $\chiM$ and $\chiB$. The theorem of Greb\'ik and
+Rozho\v{n}~\cite[Theorem~5.9]{GR21} gives $\chiM=\chiB=3$ for these
+pairs if the coloring problem is not mixing; it does not give an
+explicit coloring, and it does not apply if the problem is mixing.
+
+Section~\ref{sec:model} computes the cross angle $g$ and the range of
+compatible pairs (Lemma~\ref{lem:compat}). Section~\ref{sec:palette}
+gives a proper $3$-coloring of $T_n$ for $n\ge4$, $n\ne5$
+(Lemma~\ref{lem:palette}), and Section~\ref{sec:proof} pulls it back to
+$U(q,p)$, which proves Theorem~\ref{thm:main}.
+Section~\ref{sec:common} shows that a sector coloring exists exactly
+when $3\mid n$ (Proposition~\ref{prop:common}).
+Section~\ref{sec:family} proves that $g$ is irrational for the family
+of Theorem~\ref{thm:family} and writes out the coloring for $q=1/10$.
+Section~\ref{sec:comp} lists the rational values of $g$ for $n\le60$
+and the arc-by-arc check of \eqref{eq:color}, and
+Section~\ref{sec:questions} asks whether these are all the rational
+values, what happens when $p\not\equiv\pm2q$, and how large $k$ must
+be.
+
+\section{The model}\label{sec:model}
+
+We use the turn coordinate $x\in\T=\mathbb R/\Z$ on each circle. A point
+of $U(q,p)$ is written $A(x)$ if it lies on the outer circle (radius
+$r$) and $B(x)$ if it lies on the inner circle (radius $s$). Two points
+on the circle of radius $R(t)$ at turns $x,y$ are at distance
+$2R(t)\sin(\pi\|x-y\|)$, where $\|\cdot\|$ is the distance to $\Z$; this
+equals $1$ exactly when $x-y\equiv\pm t$. A point $A(x)$ and a point
+$B(y)$ are at distance one exactly when $\cos(2\pi(x-y))=\cos(\pi g)$,
+that is, $y-x\equiv\pm g/2$. So the edges of $U(q,p)$ are
+\begin{equation}\label{eq:edges}
+A(x)A(x\pm q),\qquad B(x)B(x\pm p),\qquad A(x)B(x\pm g/2).
+\end{equation}
+We call the first two kinds \emph{chord edges}; the third kind are the
+cross edges. When $p=1/2$ the two chord neighbours of a point on the
+inner circle coincide.
+
+\begin{lemma}\label{lem:compat}
+Let $0<q<p\le1/2$ with $p\equiv\pm2q\pmod1$. Then $q<1/3$, and
+$p=2q$ if $q\le1/4$, $p=1-2q$ if $1/4<q<1/3$. With $\xi =2\cos(\pi q)\in(1,2)$,
+\begin{equation}\label{eq:g}
+s=\frac{r}{\xi},\qquad \frac{r^2+s^2-1}{2rs}=\cos(3\pi q)+\frac{1}{4\cos(\pi q)},
+\end{equation}
+so a solution of \eqref{eq:cross} satisfies
+\[
+2\cos(\pi g)=\xi^3-3\xi +\frac1\xi.
+\]
+The pair is compatible exactly when $\xi\le \xi_0$, where $\xi_0$ is the
+unique root in $(1,2)$ of $X^4-3X^2-2X+1$. Equivalently $q\ge q_0$ with
+$q_0=\arccos(\xi_0/2)/\pi$. Rounded to five decimals, $\xi_0\approx1.94039$
+and $q_0\approx0.07791$.
+\end{lemma}
+
+\begin{proof}
+If $q\ge1/3$ then $2q\in[2/3,1)$, so the representatives of $\pm2q$ in
+$[0,1/2]$ are $1-2q\le1/3\le q$, and no $p\in(q,1/2]$ exists. For
+$q<1/3$ the representative of $\pm2q$ in $(0,1/2]$ is $2q$ or $1-2q$
+as stated, and it exceeds $q$. In both cases $\sin(\pi p)=\sin(2\pi q)$,
+so $s=1/(2\sin2\pi q)=r/(2\cos\pi q)=r/\xi$. Put $c=\cos\pi q$. Using
+$1/r^2=4\sin^2\pi q=4(1-c^2)$,
+\[
+\frac{r^2+s^2-1}{2rs}=\frac{r^2(1+1/(4c^2))-1}{r^2/c}
+=c+\frac{1}{4c}-4c(1-c^2)=4c^3-3c+\frac1{4c},
+\]
+which is \eqref{eq:g}, since $4c^3-3c=\cos 3\pi q$. Put
+$f(\xi)=\xi^3-3\xi +1/\xi$. For $\xi\in(1,2)$,
+\[
+\xi\,(f(\xi)+2)=(\xi^2-1)^2+\xi(2-\xi)>0,\qquad \xi\,(f(\xi)-2)=\xi^4-3\xi^2-2\xi +1=:h(\xi).
+\]
+So $f>-2$ on $(1,2)$, and $f(\xi)\le2$ exactly when $h(\xi)\le0$. Now
+$h(1)=-3$, $h(2)=1$ and $h''(\xi)=12\xi^2-6>0$ on $(1,2)$, so $h$ has a
+unique root $\xi_0$ in $(1,2)$ and is negative to its left. Equation
+\eqref{eq:cross} has a solution $g\in[0,1]$ exactly when
+$|f(\xi)|\le2$, which is $\xi\le \xi_0$.
+\end{proof}
+
+When $g$ is irrational we have $0<g<1$, and the two cross neighbours of
+a point are distinct. Each vertex then has degree $4$, or degree $3$ on
+the inner circle when $p=1/2$.
+
+\section{A three-coloring of the rose window graph}\label{sec:palette}
+
+For $n\ge4$ let $T_n$ be the graph with vertices $A_j,B_j$,
+$j\in\Z/n\Z$, and edges
+\begin{equation}\label{eq:Tn}
+A_jA_{j+1},\qquad B_jB_{j+2},\qquad A_jB_j,\qquad A_jB_{j+1},
+\end{equation}
+parallel edges being identified (for $n=4$ the edges $B_jB_{j+2}$ and
+$B_{j+2}B_j$ coincide). In Wilson's notation~\cite{Wil08} the rose
+window graph $R_n(u,w)$ has rim edges $A_iA_{i+1}$, spokes $A_iB_i$
+and $A_{i+u}B_i$, and hub edges $B_iB_{i+w}$; the substitution
+$j\mapsto-j$ carries $T_n$ to $R_n(1,2)$. Colors are elements of
+$\Z/3\Z$.
+
+\begin{lemma}\label{lem:palette}
+Let $n\ge4$, $n\ne5$. Put $m_-=3,2,4$ according as $n\equiv0,1,2\pmod3$,
+and $m_+=n-m_-$. Let $d_j=+1$ for $0\le j<m_+$ and $d_j=-1$ for
+$m_+\le j<n$, indices modulo $n$, and define
+\begin{equation}\label{eq:palette}
+\alpha_0=0,\qquad \alpha_{j+1}=\alpha_j+d_j,\qquad \beta_j=-\alpha_{j-1}-\alpha_j\qquad(\text{in }\Z/3\Z).
+\end{equation}
+Then $\alpha_n=\alpha_0$, and coloring $A_j$ by $\alpha_j$ and $B_j$ by $\beta_j$ is a proper
+$3$-coloring of $T_n$.
+\end{lemma}
+
+\begin{proof}
+The sum of the $d_j$ is $m_+-m_-=n-2m_-$, which is divisible by $3$ in
+each of the three cases, so the sequence $\alpha_j$ closes up. Both
+$m_+$ and $m_-$ are at least $2$: this holds for $n=4,6,7,8$ by
+inspection ($m_+=2,3,5,4$) and $m_+$ only grows with $n$ in each residue
+class. For $n=5$ we would get $m_+=1$, which is why it is excluded.
+
+Consecutive values $\alpha_{j-1},\alpha_j$ differ by $\pm1$, and since the three
+elements of $\Z/3\Z$ sum to $0$, the value $\beta_j$ is the third color,
+different from both. Hence $\beta_j\ne \alpha_j$ and $\beta_{j+1}\ne \alpha_j$, so both
+kinds of spokes are proper, and the rim $A_jA_{j+1}$ is proper since
+$d_j\ne0$. For the hub, $\alpha_{j-1}=\alpha_j-d_{j-1}$ gives
+$\beta_j=-2\alpha_j+d_{j-1}=\alpha_j+d_{j-1}$, and therefore
+\begin{equation}\label{eq:hub}
+\beta_{j+2}-\beta_j=d_j+2d_{j+1}-d_{j-1}=d_j-d_{j+1}-d_{j-1}.
+\end{equation}
+If $d_{j-1}=-d_{j+1}$ the right side is $d_j\ne0$. If
+$d_{j-1}=d_{j+1}=\sigma$ it is $d_j-2\sigma=d_j+\sigma$, which
+vanishes only when $d_j=-\sigma$, that is, when $d_j$ is a run of
+length one in the cyclic sequence $(d_j)$. Both runs have length at least
+two, so $\beta_{j+2}\ne \beta_j$ for every $j$.
+\end{proof}
+
+\begin{remark}\label{rem:five}
+The exclusion of $n=5$ is necessary: $T_5$ has no proper $3$-coloring.
+In such a coloring the increments $d_j=\alpha_{j+1}-\alpha_j\in\{\pm1\}$ sum to $0$
+modulo $3$, which for five signs forces one sign to occur exactly once.
+The triangles $A_{j-1}A_jB_j$ force $\beta_j=-\alpha_{j-1}-\alpha_j$, and
+\eqref{eq:hub} then makes the hub edge at the isolated sign
+monochromatic. The case does not arise in Theorem~\ref{thm:main}: by
+Lemma~\ref{lem:compat}, $n=5$ forces $q=1/5$ and $p=2/5$, and then
+$r^2+s^2=1$ by the identity
+$\sin^2(\pi/5)+\sin^2(2\pi/5)=5/4$ together with
+$4\sin^2(\pi/5)\sin^2(2\pi/5)=5/4$, so $\cos(\pi g)=0$ and $g=1/2$ is
+rational.
+\end{remark}
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+Let $q=a/n$ in lowest terms. By Lemma~\ref{lem:compat}, $q<1/3$, so
+$n\ge4$, and $n\ne5$ by Remark~\ref{rem:five} because $g$ is
+irrational. Let $(\alpha_j)$, $(\beta_j)$ be the sequences of
+Lemma~\ref{lem:palette}.
+
+\emph{Choice of the number of arcs.} Let $k_0\in\{1,\dots,n-1\}$ with
+$k_0a\equiv1\pmod n$. Since $ng/2$ is irrational, the numbers
+$(k_0+nt)g/2$, $t=0,1,2,\dots$, are dense modulo $1$ (the forward orbit
+of an irrational rotation is dense). So there is $k\equiv k_0\pmod n$,
+$k\ge1$, with $\|kg/2\|<1/(2n)$. Put $L=nk$. Then
+\begin{equation}\label{eq:L}
+Lq=ka\equiv1\pmod n,\qquad Lp\equiv\pm2\pmod n,\qquad
+\frac{Lg}{2}=vn+\varepsilon\ \text{ with } v\in\Z,\ |\varepsilon|<\tfrac12.
+\end{equation}
+The second relation holds because $p\equiv\pm2q\pmod1$ and $n\mid L$.
+
+\emph{The coloring.} Define
+\begin{equation}\label{eq:color}
+C(A(x))=\alpha_{\lfloor Lx\rfloor\bmod n},\qquad
+C(B(x))=\beta_{\lfloor Lx+1/2\rfloor\bmod n}.
+\end{equation}
+These are well defined on $\T$ because replacing $x$ by $x+1$ adds $L$,
+a multiple of $n$, to both indices. Each is constant on $L$ half-open
+arcs of each circle, so $C$ is Borel and Lebesgue measurable.
+
+\emph{Chord edges.} Since $Lq$ and $Lp$ are integers,
+$\lfloor L(x+q)\rfloor=\lfloor Lx\rfloor+Lq$ and
+$\lfloor L(x+p)+1/2\rfloor=\lfloor Lx+1/2\rfloor+Lp$. By \eqref{eq:L}
+the edge $A(x)A(x+q)$ receives the colors of $A_j,A_{j+1}$ and the edge
+$B(x)B(x+p)$ the colors of $B_i,B_{i\pm2}$, for suitable $j,i$. These
+are edges of $T_n$, so their colors differ by Lemma~\ref{lem:palette}.
+
+\emph{Cross edges.} Write $Lx=j+u$ with $j\in\Z$ and $0\le u<1$. Then
+\begin{equation}\label{eq:crossindex}
+\Bigl\lfloor L\bigl(x\pm \tfrac g2\bigr)+\tfrac12\Bigr\rfloor
+=j\pm vn+\bigl\lfloor u+\tfrac12\pm\varepsilon\bigr\rfloor ,
+\end{equation}
+and $0\le u+\frac12\pm\varepsilon<2$, so the last term is $0$ or $1$.
+Hence the cross edge from $A(x)$ receives the colors of $A_j$ and of
+$B_j$ or $B_{j+1}$ (indices modulo $n$), which differ by
+Lemma~\ref{lem:palette}. So $C$ is a proper $3$-coloring.
+
+\emph{Lower bound.} The five points
+\begin{equation}\label{eq:cycle}
+A(x),\ A(x+q),\ A(x+2q),\ B(x+2q+g/2),\ B(x+g/2)
+\end{equation}
+form a closed walk of length five in $U(q,p)$: the first two steps are
+chord steps by $q$ on the outer circle, the third and fifth are cross
+steps by $g/2$, and the fourth is a chord step on the inner circle, by
+$2q\equiv\pm p$. The three outer points
+are distinct because $q$ has order $n\ge4$, and the two inner points
+are distinct because $p\not\equiv0$. So \eqref{eq:cycle} is a $5$-cycle
+and $\chi\ge3$. Since $\chi\le\chiM\le\chiB\le3$, all three equal $3$.
+\qed
+
+\begin{remark}\label{rem:null}
+If a measurable coloring is only required to be proper outside a set of
+measure zero, the lower bound still holds. The five maps sending $x$ to
+the points of \eqref{eq:cycle} are rotations, so they preserve arc length.
+Hence for almost every $x$ all five points avoid a given null set, and a
+$2$-coloring that is proper off that set would be proper on the
+$5$-cycle at such an $x$, which is impossible.
+\end{remark}
+
+\begin{remark}\label{rem:hyp}
+The coloring \eqref{eq:color} is proper whenever $n\ne5$ and $k\ge1$
+satisfies $ka\equiv1\pmod n$ and $\|kg/2\|\le1/(2n)$, since
+\eqref{eq:crossindex} also covers $|\varepsilon|=\frac12$; irrationality
+of $g$ serves only to exclude $n=5$ and to provide such a $k$. The shift by
+half an arc on the inner circle is needed in \eqref{eq:color}: for
+$q=1/10$, $k=11$, using $\lfloor Lx\rfloor$ on both circles produces
+monochromatic cross edges, and so does $k=2$ (which violates
+$ka\equiv1$) with the shift kept. Section~\ref{sec:comp} gives the
+numbers of monochromatic pairs of arcs.
+\end{remark}
+
+\section{Sector colorings}\label{sec:common}
+
+\begin{proposition}\label{prop:common}
+Under the hypotheses of Theorem~\ref{thm:main}, with $q=a/n$ in lowest
+terms, there is a positive integer $m$ such that
+$x\mapsto\lfloor3mx\rfloor\bmod3$, used on both circles, is a proper
+coloring of $U(q,p)$ if and only if $3$ divides $n$.
+\end{proposition}
+
+\begin{proof}
+Let $D(x)=\lfloor3mx\rfloor\bmod3$ and let $\tau\in\mathbb R$. Write
+$z$ for the representative of $3m\tau$ in $[0,3)$. For $3mx=i+u$ with
+$i\in\Z$, $0\le u<1$, we get $D(x+\tau)-D(x)\equiv\lfloor u+z\rfloor\pmod3$.
+If $z<1$, take $u=0$; if $z>2$, take $u=3-z\in(0,1)$; in both cases the
+difference is $0$ modulo $3$. If $1\le z\le2$ the difference is $1$ or
+$2$ for every $u$. Hence $D(x)\ne D(x+\tau)$ for all $x$ exactly when
+$\{m\tau\}\in[1/3,2/3]$, where $\{\cdot\}$ is the fractional part. Note
+that this set is invariant under $y\mapsto1-y$.
+
+By \eqref{eq:edges}, $D$ is proper exactly when $\{m\tau\}\in[1/3,2/3]$
+for $\tau=q$, $\tau=p$ and $\tau=g/2$. Put $y=\{mq\}$. Since
+$p\equiv\pm2q$, the condition for $\tau=p$ is $\{2y\}\in[1/3,2/3]$. If
+$y\in[1/3,1/2)$ then $\{2y\}=2y\in[2/3,1)$, so $y=1/3$. If
+$y\in[1/2,2/3]$ then $\{2y\}=2y-1\in[0,1/3]$, so $y=2/3$. Thus the two
+chord conditions hold exactly when $\{ma/n\}\in\{1/3,2/3\}$, which is
+possible only if $3\mid n$.
+
+Conversely, if $3\mid n$, pick $m_0\in\{1,\dots,n-1\}$ with $m_0a\equiv n/3\pmod n$. Every
+$m=m_0+nt$ with $t\ge0$ satisfies $\{mq\}=1/3$, and since $ng/2$ is
+irrational the numbers $mg/2$ are dense modulo $1$; choose $t$ with
+$\{mg/2\}\in(1/3,2/3)$.
+\end{proof}
+
+\begin{remark}\label{rem:radial}
+The condition $3\mid n$ is needed for every proper $3$-coloring of
+$U(q,p)$ that colors a point by the same function of its turn on both
+circles, not only for sector colorings. (The coloring of
+Theorem~\ref{thm:main} uses different functions on the two circles.)
+Let $p\equiv\pm2q$, and suppose $F:\T\to\Z/3\Z$ is such that coloring
+both $A(x)$ and $B(x)$ by $F(x)$ is proper. The edges $A(x)A(x+q)$,
+$A(x+q)A(x+2q)$ and $B(x)B(x+2q)$ show that $F(x)$, $F(x+q)$ and
+$F(x+2q)$ are distinct for every $x$. The same holds with $x$ replaced
+by $x+q$, so $F(x+3q)=F(x)$ for every $x$. If $3\nmid n$, then $3q$
+generates the same subgroup of $\T$ as $q$, so $F(x+q)=F(x)$, and the
+edge $A(x)A(x+q)$ is monochromatic. The argument also applies when $F$
+is defined only off finitely many turns, as for a radial coloring
+in the sense of~\cite{AM14}: for all but finitely many $x$ the turns
+$x+i/n$, $i\in\Z$, avoid them.
+\end{remark}
+
+\section{Irrationality of \texorpdfstring{$g$}{g}}\label{sec:family}
+
+\begin{proof}[Proof of Theorem~\ref{thm:family}]
+By Lemma~\ref{lem:compat} the pair is compatible, and
+$2\cos(\pi g)=\xi^3-3\xi+1/\xi$ with $\xi=2\cos(\pi a/n)$. If $g$ were rational,
+$2\cos(\pi g)=\zeta+\zeta^{-1}$ for a root of unity $\zeta$ would be an
+algebraic integer. Since $\xi$ is an algebraic integer, so would be $1/\xi$,
+and $\xi$ would be a unit. We show that $\xi$ is not a unit for the stated $n$.
+
+Let $\rho=e^{\pi i/n}$ and $\omega=\rho^{2a}=e^{2\pi ia/n}$, a primitive
+$n$-th root of unity since $\gcd(a,n)=1$. Then $\xi=\rho^{-a}(1+\omega)$,
+so $\xi$ is a unit exactly when $1+\omega=(1-\omega^2)/(1-\omega)$ is. We
+use the standard facts~\cite[Chapter~2]{Was97}: if $\eta$ is a primitive
+$d$-th root of unity with $d>1$, then the norm of $1-\eta$ from
+$\mathbb Q(\eta)$ to $\mathbb Q$ is $\Phi_d(1)$, which equals $\ell$ if
+$d$ is a power of a prime $\ell$ and $1$ otherwise. We compute norms
+from $K=\mathbb Q(\omega)$, of degree $\varphi(n)$, where $\varphi$ is
+Euler's function.
+
+Let $n=2m$. Then $\omega^2$ is a primitive $m$-th root of unity, and
+\[
+N_{K/\mathbb Q}(1+\omega)=\frac{N_{K/\mathbb Q}(1-\omega^2)}{N_{K/\mathbb Q}(1-\omega)}
+=\frac{\Phi_m(1)^{[K:\mathbb Q(\omega^2)]}}{\Phi_n(1)} .
+\]
+If $m=\ell^e$ with $\ell$ an odd prime, then $\mathbb Q(\omega^2)=K$
+because $\varphi(2m)=\varphi(m)$, and $n=2\ell^e$ has two prime factors,
+so the norm is $\Phi_m(1)/\Phi_n(1)=\ell$. If $m=2^{e-1}$ with $e\ge2$,
+then $[K:\mathbb Q(\omega^2)]=\varphi(2^e)/\varphi(2^{e-1})=2$ and the
+norm is $2^2/2=2$. In both cases $1+\omega$ has norm different from
+$\pm1$ and is not a unit.
+
+The family is infinite: by Lemma~\ref{lem:compat} it contains every
+$a/2^e$ with $a$ odd and $q_0\le a/2^e<1/3$, and every $a/(2\ell)$ with
+$\ell$ an odd prime, $a$ odd, $\ell\nmid a$ and $q_0\le a/(2\ell)<1/3$.
+For $q=1/10$ we have $n=2\cdot5$, and Lemma~\ref{lem:compat} gives
+$p=1/5$.
+\end{proof}
+
+\begin{remark}
+The same computation shows that $\xi$ is a unit for every other $n\ge3$:
+for odd $n$ the elements $1-\omega^2$ and $1-\omega$ are conjugate, and for
+$n=2m$ with $m$ divisible by two distinct primes both norms are $1$. So
+for the other $n$ the number $2\cos(\pi g)$ may be an algebraic integer. For the remaining denominators the
+angle $g$ can still be irrational; in fact $g$ is irrational for $226$ of
+the $232$ compatible pairs with $n\le60$ outside the family
+(Section~\ref{sec:comp}).
+\end{remark}
+
+For $q=1/10$ the coloring of Theorem~\ref{thm:main} is the following.
+
+\begin{corollary}\label{cor:tenth}
+For $q=1/10$, $p=1/5$ we have $r=(1+\sqrt5)/2$, $s=\sqrt{(5+\sqrt5)/10}$,
+$\cos(\pi g)=s$, and $19/110<g<21/110$. The choice $k=11$, $L=110$
+satisfies \eqref{eq:L}, and the coloring \eqref{eq:color} reads
+\[
+\begin{aligned}
+C(A(x))&=(0,1,2,0,1,2,0,1,2,1)_{\lfloor110x\rfloor\bmod10},\\
+C(B(x))&=(2,2,0,1,2,0,1,2,0,0)_{\lfloor110x+1/2\rfloor\bmod10}.
+\end{aligned}
+\]
+No coloring $\lfloor3mx\rfloor\bmod3$ is proper.
+\end{corollary}
+
+\begin{proof}
+Put $w=\sqrt5$ and $t=s^2=(5+w)/10$. The values of $r=R(1/10)$ and
+$s=R(1/5)$ are the standard pentagon values, and $r^2+t-1=2rt$ by direct
+expansion, so $\cos(\pi g)=(r^2+s^2-1)/(2rs)=s$. Let $\gamma=\pi g\in(0,\pi/2)$.
+From $2<w<5/2$ we get $(3+w)/8<t<3/4$, that is $\cos^2(\pi/5)<\cos^2\gamma<\cos^2(\pi/6)$,
+so $\pi/6<\gamma<\pi/5$. The Chebyshev polynomial $T_{11}$ is odd, and
+evaluating it at $s$ in $\mathbb Q(w)(s)$ gives
+\[
+\cos(11\gamma)=s\Big(\frac{19}{25}+\frac{22w}{125}\Big)>0,\qquad
+\cos^2(11\gamma)=\frac12+\frac{6469w}{31250}.
+\]
+Since $\cos^2(\pi/10)=(5+w)/8$,
+\[
+\cos^2(11\gamma)-\cos^2(\pi/10)=-\frac18+\frac{10251w}{125000}>\frac{4877}{125000}>0 .
+\]
+As $11\gamma\in(11\pi/6,11\pi/5)\subset(3\pi/2,5\pi/2)$ and $\cos(11\gamma)>\cos(\pi/10)>0$,
+we get $|11\gamma-2\pi|<\pi/10$, which is $19/110<g<21/110$. Then
+$Lg/2=55g\in(9.5,10.5)$, so $v=1$, $|\varepsilon|<1/2$ in \eqref{eq:L},
+and $11\cdot1\equiv1\pmod{10}$. The two sequences are those of
+Lemma~\ref{lem:palette} for $n=10$, where $m_-=2$ and $m_+=8$. The pair lies in the
+family of Theorem~\ref{thm:family}, so $g$ is irrational, and $3\nmid10$
+rules out every sector coloring by Proposition~\ref{prop:common}.
+\end{proof}
+
+\section{Computations}\label{sec:comp}
+
+The following computations use exact rational arithmetic, SymPy for
+algebraic numbers and mpmath at $60$ digits; the code is in the
+repository named under Data and code availability.
+\begin{enumerate}
+\item There are $367$ pairs $q=a/n<1/3$ with $n\le60$ and
+$p\equiv\pm2q$, and $284$ of them are compatible. For each compatible
+pair the minimal polynomial of $2\cos(\pi g)$ is computed as a factor of
+a resultant, and Kronecker's theorem~\cite{Kro57} decides whether $g$ is
+rational: an algebraic integer whose conjugates are all real and lie in
+$[-2,2]$ is $2\cos$ of a rational multiple of $\pi$. The number $g$ is
+rational for exactly six pairs, $q=1/5,1/7,2/7,1/9,2/9,1/12$, with
+$g=1/2,1/3,2/3,2/9,5/9,1/12$. Of the $284$ compatible pairs, $52$ lie in
+the family of Theorem~\ref{thm:family}.
+\item For each of the remaining $278$ pairs, the least $k$ allowed in
+Section~\ref{sec:proof} is computed, and the coloring \eqref{eq:color}
+is compared with the edges \eqref{eq:edges} arc by arc. For every arc and
+every shift $\pm q$, $\pm p$, $\pm g/2$, the arcs met by the shifted arc
+are found as intervals and their colors compared. No edge is
+monochromatic. The largest $L$ is $2{,}445{,}927$, and the smallest
+distance from an arc endpoint to a shifted arc endpoint is
+$1.7\times10^{-3}$ of an arc. For $q=1/10$ the least $k$ is $11$. The
+two colorings of Remark~\ref{rem:hyp} have $64$ and $88$ monochromatic
+pairs of arcs.
+\end{enumerate}
+
+\section{Questions}\label{sec:questions}
+
+The six rational values of $g$ found for $n\le60$ all have small
+denominators. Rationality of $g$ is a linear relation with rational
+coefficients among cosines of rational multiples of $\pi$, and relations
+of this kind were classified by Conway and Jones~\cite{CJ76}.
+
+\emph{Question 1.} Are $q=1/5,1/7,2/7,1/9,2/9,1/12$ the only compatible
+$q$ with $p\equiv\pm2q$ for which $g$ is rational? A positive answer
+would extend Theorem~\ref{thm:main} to every other such pair.
+
+\emph{Question 2.} When $p\not\equiv\pm2q$ the finite graph $T_n$ is
+replaced by another one. Which rational compatible pairs with $g$
+irrational have Borel chromatic number $3$?
+
+\emph{Question 3.} Bound the least $k$ allowed in
+Section~\ref{sec:proof}, and hence the number of arcs, in terms of $n$
+and $g$.
+
+\section*{Acknowledgments and funding}
+
+The research presented in this paper was supported by the European
+Research Council (ERC) under the European Union's Horizon Europe research
+and innovation programme (grant agreement No.~101041711) and by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning. It was also supported by Heights Labs, by
+Convex Nexus Capital and by the Israel Science Foundation (ISF grants
+2258/19 and 4101/25).
+
+This work was done by multiple AI agents, Claude (Anthropic) and Codex
+(OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working
+together inside the Brain framework~\cite{BrainFramework}. The method is
+described in~\cite{MathBrainPaper}.
+
+\section*{Declaration of competing interest}
+
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+
+This paper is part of a broader research project on proving open
+problems with AI systems, carried out with Claude (Anthropic) and Codex (OpenAI) connected
+to Math Brain~\cite{MathBrainRepo} inside the Brain
+framework~\cite{BrainFramework}, as described in~\cite{MathBrainPaper}.
+Codex (model GPT-6.1-sol) found and proved Theorem~\ref{thm:main},
+Lemma~\ref{lem:palette}, Proposition~\ref{prop:common} and
+Corollary~\ref{cor:tenth}, and a separate Codex run audited them. Claude
+(Opus~5.5) checked these proofs, found and proved Lemma~\ref{lem:compat},
+Theorem~\ref{thm:family} and Remark~\ref{rem:radial}, wrote the code of
+Section~\ref{sec:comp} and wrote the text. The rose window graphs are
+Wilson's~\cite{Wil08}. Radial colorings of annuli in the unit-distance
+graph were studied by Alm and Manske~\cite{AM14}, and the sector
+colorings of Proposition~\ref{prop:common} are of the kind used by
+Chybowska-Sok\'o\l, Junosza-Szaniawski and W\k{e}sek~\cite{CJW22}. The
+facts on cyclotomic units behind Theorem~\ref{thm:family} are from
+Washington's book~\cite{Was97}.
+The author directed the work and is
+responsible for the content of the paper and for decisions concerning its
+dissemination.
+
+\section*{Data and code availability}
+
+The script \texttt{verify.py} and its output are available at
+\url{https://github.com/yspennstate/unit-distance-concentric-circles}.
+
+\begin{thebibliography}{99}
+
+\bibitem{AM14}
+J.~F. Alm and J.~Manske, \emph{On radial colorings of annuli},
+Australas. J. Combin. \textbf{60} (2014), 270--278, arXiv:1305.5229.
+
+\bibitem{CMT16}
+C.~T. Conley, A.~S. Marks and R.~D. Tucker-Drob, \emph{Brooks's theorem
+for measurable colorings}, Forum Math. Sigma \textbf{4} (2016), e16,
+doi:10.1017/fms.2016.14.
+
+\bibitem{CJ76}
+J.~H. Conway and A.~J. Jones, \emph{Trigonometric diophantine equations
+(On vanishing sums of roots of unity)}, Acta Arith. \textbf{30} (1976),
+229--240, doi:10.4064/aa-30-3-229-240.
+
+\bibitem{CJW22}
+J.~Chybowska-Sok\'o\l, K.~Junosza-Szaniawski and K.~W\k{e}sek,
+\emph{Coloring distance graphs on the plane}, Discrete Math.
+\textbf{346} (2023), no.~7, 113441, doi:10.1016/j.disc.2023.113441;
+arXiv:2201.04499 (the numbering cited is that of the arXiv version).
+
+\bibitem{GR21}
+J.~Greb\'ik and V.~Rozho\v{n}, \emph{Classification of local problems on
+paths from the perspective of descriptive combinatorics}, preprint (2021),
+arXiv:2103.14112.
+
+\bibitem{KST99}
+A.~S. Kechris, S.~Solecki and S.~Todorcevic, \emph{Borel chromatic
+numbers}, Adv. Math. \textbf{141} (1999), 1--44,
+doi:10.1006/aima.1998.1771.
+
+\bibitem{Kro57}
+L.~Kronecker, \emph{Zwei S\"atze \"uber Gleichungen mit ganzzahligen
+Coefficienten}, J. Reine Angew. Math. \textbf{53} (1857), 173--175,
+doi:10.1515/crll.1857.53.173.
+
+\bibitem{Soi09}
+A.~Soifer, \emph{The Mathematical Coloring Book}, Springer, New York,
+2009, doi:10.1007/978-0-387-74642-5.
+
+\bibitem{Was97}
+L.~C. Washington, \emph{Introduction to Cyclotomic Fields}, 2nd ed.,
+Graduate Texts in Mathematics \textbf{83}, Springer, New York, 1997.
+
+\bibitem{Wei20}
+F.~Weilacher, \emph{Descriptive chromatic numbers of locally finite and
+everywhere two ended graphs}, preprint (2020), arXiv:2004.02316.
+
+\bibitem{Wil08}
+S.~Wilson, \emph{Rose window graphs}, Ars Math. Contemp. \textbf{1}
+(2008), 7--19, doi:10.26493/1855-3974.13.5bb.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain}, public repository, 2026, \url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, doi:10.5281/zenodo.24150837,
+\url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public/tree/5629e644cdd510173ae97e9aa92642dabd22dc57}.
+
+\end{thebibliography}
+
+\end{document}
