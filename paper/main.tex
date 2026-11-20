@@ -155,8 +155,14 @@ bound comes from a $5$-cycle. The condition $p\equiv\pm2q$ forces
 $q<1/3$, and compatibility holds exactly for $q_0\le q<1/3$, where
 $q_0\approx0.0779$ is defined in Lemma~\ref{lem:compat}.
 
-Theorem~\ref{thm:main} needs $g$ to be irrational, and for small
-denominators this sometimes fails: among the $284$ compatible pairs with
+When $g$ is rational, the turns $\theta+i/n+jg/2$ of the points of a
+component take finitely many values, so every component is finite. Then
+$\chiB=\chiM=\chi$: list the proper colorings of a finite component
+with $\chi$ colors in lexicographic order of the colors of its points,
+taken first on the outer circle and then on the inner one, each by
+increasing angle, and give each component its first one. So the irrationality of $g$
+is what makes the Borel and measurable questions nontrivial. For small
+denominators $g$ is sometimes rational: among the $284$ compatible pairs with
 denominator of $q$ at most $60$, the number $g$ is rational exactly for
 $q=1/5,1/7,2/7,1/9,2/9$ and $1/12$ (Section~\ref{sec:comp}). The next
 result gives an infinite family where irrationality is guaranteed.
@@ -418,8 +424,8 @@ satisfies $ka\equiv1\pmod n$ and $\|kg/2\|\le1/(2n)$, since
 of $g$ serves only to exclude $n=5$ and to provide such a $k$. The shift by
 half an arc on the inner circle is needed in \eqref{eq:color}: for
 $q=1/10$, $k=11$, using $\lfloor Lx\rfloor$ on both circles produces
-monochromatic cross edges, and so does $k=2$ (which violates
-$ka\equiv1$) with the shift kept. Section~\ref{sec:comp} gives the
+monochromatic cross edges, and $k=2$ (which violates $ka\equiv1$) with
+the shift kept produces monochromatic edges. Section~\ref{sec:comp} gives the
 numbers of monochromatic pairs of arcs.
 \end{remark}
 
@@ -488,7 +494,7 @@ so $\xi$ is a unit exactly when $1+\omega=(1-\omega^2)/(1-\omega)$ is. We
 use the standard facts~\cite[Chapter~2]{Was97}: if $\eta$ is a primitive
 $d$-th root of unity with $d>1$, then the norm of $1-\eta$ from
 $\mathbb Q(\eta)$ to $\mathbb Q$ is $\Phi_d(1)$, where $\Phi_d$ is the
-$d$-th cyclotomic polynomial, and $\Phi_d(1)$ equals $\ell$ if
+$d$-th cyclotomic polynomial. The value $\Phi_d(1)$ equals $\ell$ if
 $d$ is a power of a prime $\ell$ and $1$ otherwise. We compute norms
 from $K=\mathbb Q(\omega)$, of degree $\varphi(n)$, where $\varphi$ is
 Euler's function.
@@ -581,7 +587,7 @@ Section~\ref{sec:proof} is computed. The largest value of $L=nk$ is
 $2{,}445{,}927$, and for $q=1/10$ the least $k$ is $11$. For $q=1/10$
 the two colorings of Remark~\ref{rem:hyp}, the one without the shift by
 half an arc and the one with $k=2$, join $88$ and $64$ pairs of arcs,
-respectively, by cross edges whose ends have the same color.
+respectively, by edges whose ends have the same color.
 \end{enumerate}
 
 \section{Questions}\label{sec:questions}
