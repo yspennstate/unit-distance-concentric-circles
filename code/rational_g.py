@@ -13,6 +13,7 @@ If g were rational every conjugate would lie in [-2, 2]; the script prints the l
 of the largest conjugate. The pairs with n <= 60 are handled exactly in verify.py.
 """
 import json
+import os
 import math
 from itertools import combinations
 
@@ -83,4 +84,4 @@ print("pairs:", len(rows), " least excess of the largest conjugate over 2:", rou
 assert excess > 3.04 and len(rows) == 95
 json.dump({"bound_denominators": Ns, "c_counts": {str(c): len(v) for c, v in cs.items()},
            "denominators_above_60": dens, "pairs_above_60": len(rows), "least_excess": excess,
-           "rows": rows}, open("rational_g_output.json", "w"), indent=1)
+           "rows": rows}, open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "rational_g_output.json"), "w"), indent=1)
